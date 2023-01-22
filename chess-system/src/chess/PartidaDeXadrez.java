@@ -1,6 +1,5 @@
 package chess;
 
-import boardgame.Posicao;
 import boardgame.Tabuleiro;
 import chess.pieces.Rei;
 import chess.pieces.Torre;
@@ -24,9 +23,13 @@ public class PartidaDeXadrez {
         return mat;
     }
 
+    private void colocarNovaPeça(char coluna, int linha, PecaDeXadrez peca) {
+        tabuleiro.colocarPeca(peca, new posiçãoDoXadrez(coluna, linha).posicionar());
+    }
+
     private void setupInicial() {
-        tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(2, 1));
-        tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0, 4));
-        tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(7, 4));
+        colocarNovaPeça('b', 6, new Torre(tabuleiro, Cor.BRANCO));
+        colocarNovaPeça('c', 4, new Rei(tabuleiro, Cor.PRETO));
+        colocarNovaPeça('d', 7, new Torre(tabuleiro, Cor.BRANCO));
     }
 }
