@@ -28,8 +28,18 @@ public class PartidaDeXadrez {
     }
 
     private void setupInicial() {
-        colocarNovaPeça('b', 6, new Torre(tabuleiro, Cor.BRANCO));
-        colocarNovaPeça('c', 4, new Rei(tabuleiro, Cor.PRETO));
-        colocarNovaPeça('d', 7, new Torre(tabuleiro, Cor.BRANCO));
+        colocarNovaPeça('c', 1, new Torre(tabuleiro, Cor.WHITE));
+        colocarNovaPeça('c', 2, new Torre(tabuleiro, Cor.WHITE));
+        colocarNovaPeça('d', 2, new Torre(tabuleiro, Cor.WHITE));
+        colocarNovaPeça('e', 2, new Torre(tabuleiro, Cor.WHITE));
+        colocarNovaPeça('e', 1, new Torre(tabuleiro, Cor.WHITE));
+        colocarNovaPeça('d', 1, new Rei(tabuleiro, Cor.WHITE));
+
+        colocarNovaPeça('c', 7, new Torre(tabuleiro, Cor.BLACK));
+        colocarNovaPeça('c', 8, new Torre(tabuleiro, Cor.BLACK));
+        colocarNovaPeça('d', 7, new Torre(tabuleiro, Cor.BLACK));
+        colocarNovaPeça('e', 7, new Torre(tabuleiro, Cor.BLACK));
+        colocarNovaPeça('e', 8, new Torre(tabuleiro, Cor.BLACK));
+        colocarNovaPeça('d', 8, new Rei(tabuleiro, Cor.BLACK));
     }
 }
