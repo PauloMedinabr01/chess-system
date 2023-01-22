@@ -15,6 +15,4 @@ public class Torre extends PecaDeXadrez {
         return "T";
     }
 
-    
-
 }

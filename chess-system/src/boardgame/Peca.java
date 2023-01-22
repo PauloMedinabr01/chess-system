@@ -1,7 +1,7 @@
 package boardgame;
 
 public class Peca {
-    
+
     protected Posicao posicao;
     private Tabuleiro tabuleiro;
 
